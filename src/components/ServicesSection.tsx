@@ -7,17 +7,17 @@ const services = [
   {
     title: "Residential Design",
     desc: "Bespoke interiors that reflect your personal lifestyle.",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2000&auto=format&fit=crop"
   },
   {
     title: "Commercial Spaces",
     desc: "Elevated environments that inspire productivity and brand identity.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2000&auto=format&fit=crop"
   },
   {
     title: "Custom Furniture",
     desc: "Signature pieces designed and built exclusively for your space.",
-    image: "https://images.unsplash.com/photo-1540932239986-30128078f3b5?q=80&w=2000&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2000&auto=format&fit=crop"
   }
 ];
 
