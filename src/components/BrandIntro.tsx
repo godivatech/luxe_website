@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 export default function BrandIntro() {
   const container = useRef<HTMLDivElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start 80%", "end 20%"]
@@ -19,7 +19,7 @@ export default function BrandIntro() {
       <div className="container mx-auto max-w-5xl">
         <motion.div style={{ opacity, y }} className="text-center">
           <h2 className="font-serif text-3xl md:text-5xl lg:text-7xl leading-snug">
-            Since 2018, we have been <br className="hidden md:block"/>
+            Since 2018, we have been <br className="hidden md:block" />
             <span className="text-accent italic">transforming visions</span> into elegant, functional, and timeless reality.
           </h2>
           <p className="mt-12 text-foreground/60 text-lg md:text-xl font-sans max-w-3xl mx-auto leading-relaxed">
