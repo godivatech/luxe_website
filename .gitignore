@@ -43,4 +43,3 @@ next-env.d.ts
 # Ignore local project images since they are on ImageKit
 public/images/projects
 
-# in the main const => () {}
