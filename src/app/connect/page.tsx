@@ -29,9 +29,9 @@ export default function ConnectPage() {
               <div>
                 <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2">Our Studio</h4>
                 <p className="text-xl">
-                  Iyerbungalow<br />
-                  Madurai, TN<br />
-                  India
+                  11a Navalar nagar 3rd street,<br />
+                  ss colony, Madurai - 625010<br />
+                  Tamil Nadu, India
                 </p>
               </div>
             </div>
@@ -42,7 +42,7 @@ export default function ConnectPage() {
               </div>
               <div>
                 <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2">Email Us</h4>
-                <p className="text-xl">hello@luxedecors.com</p>
+                <p className="text-xl font-medium">luxeinteriordecors@gmail.com</p>
               </div>
             </div>
 
@@ -51,15 +51,28 @@ export default function ConnectPage() {
                 <MessageCircle size={24} />
               </div>
               <div>
-                <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2">WhatsApp</h4>
+                <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2">Connect Instantly</h4>
+                <p className="text-xl font-medium mb-2">+91 78680 16007</p>
                 <a 
-                  href="https://wa.me/91XXXXXXXXXX" 
+                  href="https://wa.me/917868016007" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-xl hover:text-accent transition-colors"
+                  className="text-accent hover:underline flex items-center gap-2"
                 >
-                  Message us on WhatsApp
+                  Chat on WhatsApp <ArrowRight size={16} />
                 </a>
+              </div>
+            </div>
+
+            <div className="pt-8 border-t border-white/5 space-y-4">
+              <h4 className="text-sm uppercase tracking-widest text-foreground/40">Direct Contact</h4>
+              <div>
+                <p className="text-lg">Asraf ali.s</p>
+                <p className="text-foreground/60">+91 97513 48944</p>
+              </div>
+              <div className="pt-4">
+                <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2">Office Hours</h4>
+                <p className="text-foreground/80">Mon - Sat: 10.00 AM - 7.00 PM</p>
               </div>
             </div>
           </div>
@@ -91,7 +104,6 @@ export default function ConnectPage() {
                 <select className="w-full bg-transparent border-b border-white/10 py-3 focus:outline-none focus:border-accent transition-colors appearance-none">
                   <option className="bg-background">Residential Design</option>
                   <option className="bg-background">Commercial Design</option>
-                  <option className="bg-background">Custom Furniture</option>
                   <option className="bg-background">Other Inquiry</option>
                 </select>
               </div>

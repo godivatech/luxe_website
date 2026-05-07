@@ -5,19 +5,14 @@ import { ArrowUpRight } from "lucide-react";
 
 const services = [
   {
-    title: "Residential Design",
-    desc: "Bespoke interiors that reflect your personal lifestyle.",
+    title: "Residential Interior",
+    desc: "Bespoke design and seamless execution for luxury homes and apartments.",
     image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2000&auto=format&fit=crop"
   },
   {
-    title: "Commercial Spaces",
-    desc: "Elevated environments that inspire productivity and brand identity.",
+    title: "Commercial & Office",
+    desc: "Functional, branded environments delivered with turnkey precision.",
     image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2000&auto=format&fit=crop"
-  },
-  {
-    title: "Custom Furniture",
-    desc: "Signature pieces designed and built exclusively for your space.",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2000&auto=format&fit=crop"
   }
 ];
 
@@ -45,7 +40,7 @@ export default function ServicesSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <motion.div
               key={service.title}

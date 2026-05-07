@@ -19,11 +19,11 @@ export default function BrandIntro() {
       <div className="container mx-auto max-w-5xl">
         <motion.div style={{ opacity, y }} className="text-center">
           <h2 className="font-serif text-3xl md:text-5xl lg:text-7xl leading-snug">
-            We believe that a space is more than just dimensions. It is a <br className="hidden md:block"/>
-            <span className="text-accent italic">living canvas</span> that reflects your identity, aspirations, and the art of magnificent living.
+            Since 2018, we have been <br className="hidden md:block"/>
+            <span className="text-accent italic">transforming visions</span> into elegant, functional, and timeless reality.
           </h2>
-          <p className="mt-12 text-foreground/60 text-lg md:text-xl font-sans max-w-2xl mx-auto leading-relaxed">
-            Based in Madurai, we bring an uncompromising dedication to high-end interior craftsmanship. Every texture, every curve, and every beam of light is meticulously orchestrated to create sanctuaries of pure elegance.
+          <p className="mt-12 text-foreground/60 text-lg md:text-xl font-sans max-w-3xl mx-auto leading-relaxed">
+            Luxe Interiors is a premium interior design and execution firm dedicated to creating sophisticated spaces. We specialize in transforming residential and commercial interiors into luxurious environments that reflect our clients&apos; lifestyle, personality, and aspirations. Our team combines creativity with practicality, delivering designs that are not only visually stunning but also smart, efficient, and built to last.
           </p>
         </motion.div>
       </div>

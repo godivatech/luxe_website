@@ -16,8 +16,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "LUXE | Luxury Interior Design Madurai",
-  description: "Award-winning luxury interior design brand based in Madurai. Elevating spaces, defining luxury.",
+  title: "Luxe Interiors | Turning spaces into luxury statements",
+  description: "Luxe Interiors is a premium interior design and execution firm in Madurai, specializing in residential and commercial spaces since 2018.",
 };
 
 export default function RootLayout({

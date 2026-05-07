@@ -36,7 +36,7 @@ export default function HeroSection() {
           </span>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl font-bold leading-tight mb-8">
             Elevating Spaces,<br />
-            <span className="italic font-light text-white/90">Defining Luxury.</span>
+            <span className="italic font-light text-white/90 text-4xl md:text-6xl lg:text-7xl block mt-4">Turning spaces into <br className="md:hidden"/> luxury statements.</span>
           </h1>
         </motion.div>
 

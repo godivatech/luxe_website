@@ -12,9 +12,6 @@ export default function Footer() {
           <p className="text-foreground/60 max-w-sm mb-10 text-lg">
             Award-winning luxury interior design based in Madurai, transforming spaces into timeless experiences.
           </p>
-          <a href="mailto:hello@luxedecors.com" className="inline-flex items-center gap-2 border-b border-accent text-accent uppercase tracking-widest pb-1 hover:opacity-80 transition-opacity">
-            Start a project <ArrowUpRight size={16} />
-          </a>
         </div>
         <div className="flex flex-col md:items-end justify-between">
           <div className="flex gap-12 font-sans w-full md:w-auto">
@@ -27,10 +24,16 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <h4 className="uppercase tracking-widest text-xs text-foreground/40 mb-2">Studio</h4>
               <p className="text-foreground/80">
-                Iyerbungalow<br/>
-                Madurai, TN<br/>
-                India
+                11a Navalar nagar 3rd street,<br/>
+                ss colony, Madurai - 625010<br/>
+                Tamil Nadu, India
               </p>
+              <a href="mailto:luxeinteriordecors@gmail.com" className="text-foreground/80 hover:text-accent transition-colors mt-2">
+                luxeinteriordecors@gmail.com
+              </a>
+              <a href="tel:+917868016007" className="text-foreground/80 hover:text-accent transition-colors">
+                +91 78680 16007
+              </a>
             </div>
           </div>
         </div>
