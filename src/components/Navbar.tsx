@@ -44,7 +44,7 @@ export default function Navbar() {
           <Link href="/portfolio" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
             Portfolio
           </Link>
-          <Link href="/#connect" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
+          <Link href="/connect" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
             Connect
           </Link>
         </nav>
@@ -81,7 +81,7 @@ export default function Navbar() {
                 </Link>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
-                <Link href="/#connect" onClick={() => setMobileMenuOpen(false)} className="font-serif text-4xl text-foreground hover:text-accent transition-colors">
+                <Link href="/connect" onClick={() => setMobileMenuOpen(false)} className="font-serif text-4xl text-foreground hover:text-accent transition-colors">
                   Connect
                 </Link>
               </motion.div>

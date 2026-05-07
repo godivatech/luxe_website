@@ -27,8 +27,8 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <h4 className="uppercase tracking-widest text-xs text-foreground/40 mb-2">Studio</h4>
               <p className="text-foreground/80">
-                12, Heritage Ave<br/>
-                Madurai, TN 625001<br/>
+                Iyerbungalow<br/>
+                Madurai, TN<br/>
                 India
               </p>
             </div>
@@ -38,8 +38,9 @@ export default function Footer() {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/5 text-sm text-foreground/40">
         <p>&copy; {new Date().getFullYear()} LUXE Interior Decors. All rights reserved.</p>
         <div className="flex gap-6 mt-4 md:mt-0">
-          <Link href="#" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-          <Link href="#" className="hover:text-foreground transition-colors">Terms of Service</Link>
+          <p>
+            Designed and Developed by <a href="https://www.godivatech.com" target="_blank" rel="noopener noreferrer" className="font-bold text-foreground hover:text-accent transition-colors">Godivatech</a>
+          </p>
         </div>
       </div>
     </footer>

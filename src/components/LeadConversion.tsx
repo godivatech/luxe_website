@@ -29,33 +29,25 @@ export default function LeadConversion() {
           Connect with our design experts for a complimentary consultation. Let’s bring your vision to life.
         </motion.p>
 
-        <motion.form 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="flex flex-col md:flex-row gap-4 justify-center items-center max-w-xl mx-auto mb-12"
-          onSubmit={(e) => e.preventDefault()}
+          className="flex flex-col md:flex-row gap-6 justify-center items-center"
         >
-          <input 
-            type="email" 
-            placeholder="Enter your email address" 
-            className="w-full md:w-2/3 bg-transparent border-b border-black/30 placeholder-black/50 px-4 py-3 focus:outline-none focus:border-black transition-colors"
-          />
-          <button className="w-full md:w-auto mt-4 md:mt-0 flex items-center justify-center gap-2 bg-black text-white px-8 py-4 uppercase tracking-widest text-sm font-semibold hover:bg-black/80 transition-colors">
-            Consult Now <ArrowRight size={18} />
-          </button>
-        </motion.form>
-
-        <motion.div
-           initial={{ opacity: 0 }}
-           whileInView={{ opacity: 1 }}
-           viewport={{ once: true }}
-           transition={{ delay: 0.5 }}
-           className="flex items-center justify-center gap-4 mt-8 pt-8 border-t border-black/10 flex-col md:flex-row"
-        >
-          <span className="text-sm font-semibold uppercase tracking-widest">Or connect instantly via</span>
-          <a href="https://wa.me/something" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[#25D366] text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity font-semibold w-full md:w-auto mt-4 md:mt-0 justify-center">
+          <a 
+            href="/connect" 
+            className="w-full md:w-auto flex items-center justify-center gap-2 bg-black text-white px-10 py-5 uppercase tracking-widest text-sm font-semibold hover:bg-black/80 transition-colors rounded-full"
+          >
+            Get in touch <ArrowRight size={18} />
+          </a>
+          <a 
+            href="https://wa.me/91XXXXXXXXXX" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="w-full md:w-auto flex items-center gap-2 border border-black/20 px-10 py-5 rounded-full hover:bg-black/5 transition-colors font-semibold justify-center"
+          >
             <MessageCircle size={18} /> WhatsApp
           </a>
         </motion.div>
