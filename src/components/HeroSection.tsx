@@ -18,9 +18,9 @@ export default function HeroSection() {
       <motion.div style={{ y, opacity }} className="absolute inset-0 w-full h-full">
         {/* Placeholder for video/image. A dark elegant gradient for now */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-10" />
-        <img 
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2800&auto=format&fit=crop" 
-          alt="Luxury Interior" 
+        <img
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2800&auto=format&fit=crop"
+          alt="Luxury Interior"
           className="w-full h-full object-cover scale-105"
         />
       </motion.div>
@@ -36,7 +36,7 @@ export default function HeroSection() {
           </span>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl font-bold leading-tight mb-8">
             Elevating Spaces,<br />
-            <span className="italic font-light text-white/90 text-4xl md:text-6xl lg:text-7xl block mt-4">Turning spaces into <br className="md:hidden"/> luxury statements.</span>
+            <span className="italic font-light text-white/90 text-4xl md:text-6xl lg:text-7xl block mt-4">Turning spaces into <br className="md:hidden" /> luxury statements.</span>
           </h1>
         </motion.div>
 
@@ -48,7 +48,7 @@ export default function HeroSection() {
         >
           <span className="text-xs uppercase tracking-widest text-white/50">Scroll to Explore</span>
           <div className="w-[1px] h-16 bg-white/20 relative overflow-hidden">
-            <motion.div 
+            <motion.div
               animate={{ y: ["-100%", "100%"] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-0 w-full h-full bg-accent"
