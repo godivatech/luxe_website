@@ -35,11 +35,18 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-10">
-          {["Spaces", "Philosophy", "Gallery", "Connect"].map((item) => (
-            <Link key={item} href={`#${item.toLowerCase()}`} className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
-              {item}
-            </Link>
-          ))}
+          <Link href="/#spaces" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
+            Spaces
+          </Link>
+          <Link href="/#philosophy" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
+            Philosophy
+          </Link>
+          <Link href="/portfolio" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
+            Portfolio
+          </Link>
+          <Link href="/#connect" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
+            Connect
+          </Link>
         </nav>
 
         {/* Mobile Toggle */}
@@ -58,18 +65,26 @@ export default function Navbar() {
             className="fixed inset-0 bg-background/95 z-40 flex flex-col items-center justify-center"
           >
             <nav className="flex flex-col items-center gap-8">
-              {["Spaces", "Philosophy", "Gallery", "Connect"].map((item, i) => (
-                <motion.div
-                  key={item}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  <Link href={`#${item.toLowerCase()}`} onClick={() => setMobileMenuOpen(false)} className="font-serif text-4xl text-foreground hover:text-accent transition-colors">
-                    {item}
-                  </Link>
-                </motion.div>
-              ))}
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
+                <Link href="/#spaces" onClick={() => setMobileMenuOpen(false)} className="font-serif text-4xl text-foreground hover:text-accent transition-colors">
+                  Spaces
+                </Link>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+                <Link href="/#philosophy" onClick={() => setMobileMenuOpen(false)} className="font-serif text-4xl text-foreground hover:text-accent transition-colors">
+                  Philosophy
+                </Link>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+                <Link href="/portfolio" onClick={() => setMobileMenuOpen(false)} className="font-serif text-4xl text-foreground hover:text-accent transition-colors">
+                  Portfolio
+                </Link>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
+                <Link href="/#connect" onClick={() => setMobileMenuOpen(false)} className="font-serif text-4xl text-foreground hover:text-accent transition-colors">
+                  Connect
+                </Link>
+              </motion.div>
             </nav>
           </motion.div>
         )}
