@@ -28,7 +28,7 @@ export default function PortfolioMasonry() {
             viewport={{ once: true }}
             className="font-serif text-4xl md:text-6xl font-bold mb-6"
           >
-            Selected Works
+            Our Works
           </motion.h2>
           <Link 
             href="/portfolio" 
