@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
         <div>
           <h2 className="font-serif text-5xl md:text-7xl font-bold mb-6">
-            Let&apos;s craft <br/> <span className="text-accent italic">your vision.</span>
+            Let&apos;s craft <br /> <span className="text-accent italic">your vision.</span>
           </h2>
           <p className="text-foreground/60 max-w-sm mb-10 text-lg">
             Award-winning luxury interior design based in Madurai, transforming spaces into timeless experiences.
@@ -24,8 +24,8 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <h4 className="uppercase tracking-widest text-xs text-foreground/40 mb-2">Studio</h4>
               <p className="text-foreground/80">
-                11a Navalar nagar 3rd street,<br/>
-                ss colony, Madurai - 625010<br/>
+                11a Navalar nagar 3rd street,<br />
+                ss colony, Madurai - 625010<br />
                 Tamil Nadu, India
               </p>
               <a href="mailto:luxeinteriordecors@gmail.com" className="text-foreground/80 hover:text-accent transition-colors mt-2">
