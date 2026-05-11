@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -6,6 +7,13 @@ export default function Footer() {
     <footer className="bg-background relative text-foreground pt-32 pb-12 px-6 md:px-12 border-t border-white/5" id="connect">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
         <div>
+          <Image
+            src="/LUXE LOGO.png"
+            alt="LUXE Interior Decors"
+            width={200}
+            height={200}
+            className="w-32 h-32 md:w-40 md:h-40 mb-8 object-contain brightness-0 invert opacity-80"
+          />
           <h2 className="font-serif text-5xl md:text-7xl font-bold mb-6">
             Let&apos;s craft <br /> <span className="text-accent italic">your vision.</span>
           </h2>

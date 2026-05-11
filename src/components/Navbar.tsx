@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import clsx from "clsx";
 
 export default function Navbar() {
@@ -29,8 +30,14 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <Link href="/" className="font-serif text-2xl font-bold tracking-widest uppercase text-foreground z-50 relative">
-          LUXE<span className="text-accent">.</span>
+        <Link href="/" className="z-50 relative">
+          <Image
+            src="/LUXE LOGO.png"
+            alt="LUXE Interior Decors"
+            width={120}
+            height={120}
+            className="w-20 h-20 md:w-28 md:h-28 object-contain brightness-0 invert"
+          />
         </Link>
 
         {/* Desktop Nav */}
