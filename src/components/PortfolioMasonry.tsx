@@ -22,7 +22,7 @@ export default function PortfolioMasonry() {
     <section id="gallery" className="py-24 md:py-48 px-6 bg-background">
       <div className="container mx-auto">
         <div className="mb-20 text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -30,8 +30,8 @@ export default function PortfolioMasonry() {
           >
             Our Works
           </motion.h2>
-          <Link 
-            href="/portfolio" 
+          <Link
+            href="/portfolio"
             className="text-accent uppercase tracking-widest text-sm border-b border-accent pb-1 inline-block hover:opacity-80 transition-opacity"
           >
             <motion.span
@@ -56,9 +56,9 @@ export default function PortfolioMasonry() {
               className={`relative group overflow-hidden ${project.className} aspect-square md:aspect-auto`}
             >
               <Link href={`/portfolio/${project.id}`} className="block w-full h-full">
-                <img 
-                  src={project.coverImage} 
-                  alt={project.title} 
+                <img
+                  src={project.coverImage}
+                  alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
