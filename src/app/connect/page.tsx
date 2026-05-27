@@ -8,7 +8,7 @@ export default function ConnectPage() {
           <div className="max-w-4xl">
             <h1 className="font-serif text-6xl md:text-8xl font-bold mb-8 leading-tight">
               Let&apos;s talk about <br />
-              <span className="text-accent italic">your project.</span>
+              <span className="text-accent italic">your project</span>
             </h1>
             <p className="font-sans text-xl md:text-2xl text-foreground/60 max-w-2xl">
               Whether you have a specific vision or just want to explore possibilities, 
