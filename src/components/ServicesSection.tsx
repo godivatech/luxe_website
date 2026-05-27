@@ -20,7 +20,7 @@ export default function ServicesSection() {
   return (
     <section id="spaces" className="py-24 md:py-48 px-6 bg-[#0E0E0E]">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div className="flex flex-col items-center text-center mb-20 gap-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-foreground/60 max-w-sm md:text-right"
+            className="text-foreground/60 max-w-md mx-auto"
           >
             Comprehensive luxury solutions tailored for residential and commercial properties.
           </motion.p>

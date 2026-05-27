@@ -24,22 +24,28 @@ export default function TestimonialsSection() {
         
         {/* Marquee Track */}
         <motion.div 
-          animate={{ x: [0, -1000] }}
+          animate={{ x: ["0%", "-50%"] }}
           transition={{
             repeat: Infinity,
             repeatType: "loop",
-            duration: 20,
+            duration: 25,
             ease: "linear",
           }}
-          className="flex whitespace-nowrap gap-8 pr-8 items-center"
+          className="flex whitespace-nowrap gap-6 md:gap-8 pr-6 md:pr-8 items-center transform-gpu"
+          style={{ willChange: "transform" }}
         >
-          {/* Duplicate the array a few times to ensure infinite scroll coverage */}
-          {[...testimonials, ...testimonials, ...testimonials].map((t, i) => (
-            <div key={i} className="bg-background/50 border border-white/5 p-8 rounded min-w-[300px] md:min-w-[450px] whitespace-normal flex-shrink-0">
-              <p className="font-serif text-xl md:text-2xl leading-relaxed mb-8">&quot;{t.quote}&quot;</p>
+          {/* Duplicate the array once to enable a seamless 50% wrap */}
+          {[...testimonials, ...testimonials].map((t, i) => (
+            <div 
+              key={i} 
+              className="bg-background/50 border border-white/5 p-6 md:p-8 rounded-2xl min-w-[280px] md:min-w-[450px] whitespace-normal flex-shrink-0"
+            >
+              <p className="font-serif text-base md:text-xl leading-relaxed mb-6 md:mb-8 text-white/90">
+                &quot;{t.quote}&quot;
+              </p>
               <div>
-                <p className="font-bold text-sm tracking-widest uppercase">{t.author}</p>
-                <p className="text-foreground/50 text-xs tracking-widest uppercase mt-1">{t.role}</p>
+                <p className="font-bold text-xs md:text-sm tracking-widest uppercase">{t.author}</p>
+                <p className="text-foreground/50 text-[10px] md:text-xs tracking-widest uppercase mt-1">{t.role}</p>
               </div>
             </div>
           ))}
