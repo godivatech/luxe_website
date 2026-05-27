@@ -36,16 +36,16 @@ export default function Navbar() {
             alt="LUXE Interior Decors"
             width={120}
             height={120}
-            className="w-20 h-20 md:w-28 md:h-28 object-contain brightness-0 invert"
+            className="w-20 h-20 md:w-28 md:h-28 object-contain"
           />
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-10">
-          <Link href="/#spaces" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
+          <Link href="/#gallery" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
             Spaces
           </Link>
-          <Link href="/#philosophy" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
+          <Link href="/philosophy" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
             Philosophy
           </Link>
           <Link href="/portfolio" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
@@ -73,12 +73,12 @@ export default function Navbar() {
           >
             <nav className="flex flex-col items-center gap-8">
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-                <Link href="/#spaces" onClick={() => setMobileMenuOpen(false)} className="font-serif text-4xl text-foreground hover:text-accent transition-colors">
+                <Link href="/#gallery" onClick={() => setMobileMenuOpen(false)} className="font-serif text-4xl text-foreground hover:text-accent transition-colors">
                   Spaces
                 </Link>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-                <Link href="/#philosophy" onClick={() => setMobileMenuOpen(false)} className="font-serif text-4xl text-foreground hover:text-accent transition-colors">
+                <Link href="/philosophy" onClick={() => setMobileMenuOpen(false)} className="font-serif text-4xl text-foreground hover:text-accent transition-colors">
                   Philosophy
                 </Link>
               </motion.div>

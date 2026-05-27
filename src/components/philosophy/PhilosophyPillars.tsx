@@ -1,0 +1,108 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Compass, Eye, ShieldAlert, Award, Feather, Layers } from "lucide-react";
+
+const pillars = [
+  {
+    icon: Compass,
+    title: "Spatial Honesty",
+    subtitle: "Choreographing flow & light",
+    desc: "We design layouts around how people move and interact. By studying natural lighting trajectories, ceiling heights, and air circulation, we ensure the structural layout is fundamentally comfortable before adding any decor.",
+  },
+  {
+    icon: Layers,
+    title: "Material Authenticity",
+    subtitle: "Textures that tell stories",
+    desc: "We prioritize authentic materials—natural stone patterns, custom-milled teak wood, glass, and raw metals. These textures respond uniquely to lighting and age with character over years of occupancy.",
+  },
+  {
+    icon: Feather,
+    title: "Custom Identity",
+    subtitle: "Bespoke craftsmanship",
+    desc: "Luxury is personalized. Every project includes uniquely tailored joinery, bespoke furniture detailing, and hand-selected fixtures created specifically for the owner, ensuring it cannot be replicated elsewhere.",
+  },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
+  },
+};
+
+export default function PhilosophyPillars() {
+  return (
+    <section className="py-24 md:py-36 bg-[#0c0c0c] px-6 relative border-b border-white/5">
+      <div className="container mx-auto">
+        <div className="max-w-3xl mb-20">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-accent uppercase tracking-widest text-xs font-semibold block mb-4"
+          >
+            The Tenets
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="font-serif text-3xl md:text-5xl font-bold leading-tight"
+          >
+            Our core pillars represent a commitment to architectural truth.
+          </motion.h2>
+        </div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+        >
+          {pillars.map((p, index) => {
+            const Icon = p.icon;
+            return (
+              <motion.div
+                key={p.title}
+                variants={itemVariants}
+                className="group bg-background border border-white/5 hover:border-accent/30 p-8 md:p-10 rounded-2xl transition-colors duration-500 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-accent mb-8 group-hover:bg-accent group-hover:text-background transition-colors duration-500">
+                    <Icon size={24} />
+                  </div>
+                  <span className="text-xs uppercase tracking-widest text-foreground/40 block mb-2 font-medium">
+                    {p.subtitle}
+                  </span>
+                  <h3 className="font-serif text-2xl font-semibold mb-4 text-white group-hover:text-accent transition-colors duration-300">
+                    {p.title}
+                  </h3>
+                  <p className="text-foreground/60 leading-relaxed font-sans text-sm md:text-base">
+                    {p.desc}
+                  </p>
+                </div>
+                <div className="mt-8 pt-6 border-t border-white/5 text-xs text-accent uppercase tracking-widest font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  Tenet 0{index + 1}
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </div>
+    </section>
+  );
+}

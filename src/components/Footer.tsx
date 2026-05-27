@@ -12,7 +12,7 @@ export default function Footer() {
             alt="LUXE Interior Decors"
             width={200}
             height={200}
-            className="w-32 h-32 md:w-40 md:h-40 mb-8 object-contain brightness-0 invert opacity-80"
+            className="w-32 h-32 md:w-40 md:h-40 mb-8 object-contain opacity-80"
           />
           <h2 className="font-serif text-5xl md:text-7xl font-bold mb-6">
             Let&apos;s craft <br /> <span className="text-accent italic">your vision.</span>
