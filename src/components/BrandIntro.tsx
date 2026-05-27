@@ -23,7 +23,7 @@ export default function BrandIntro() {
             <span className="text-accent italic">transforming visions</span> into elegant, functional, and timeless reality.
           </h2>
           <p className="mt-12 text-foreground/60 text-lg md:text-xl font-sans max-w-3xl mx-auto leading-relaxed">
-            Luxe Interiors is a premium interior design and execution firm dedicated to creating sophisticated spaces. We specialize in transforming residential and commercial interiors into luxurious environments that reflect our clients&apos; lifestyle, personality, and aspirations. Our team combines creativity with practicality, delivering designs that are not only visually stunning but also smart, efficient, and built to last.
+            Luxe Interiors is a premium interior design and execution firm dedicated to creating sophisticated spaces. We specialize in transforming residential and commercial interiors into luxurious environments that reflect our clients&apos; lifestyle, personality, and aspirations. Our team combines creativity with practicality, delivering designs that are not only visually stunning but also smart, efficient, and built to last. We handle everything seamlessly, so you can enjoy a stress-free journey while watching your vision come to life.
           </p>
         </motion.div>
       </div>
