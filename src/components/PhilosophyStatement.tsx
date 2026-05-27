@@ -11,35 +11,35 @@ export default function PhilosophyStatement() {
     offset: ["start start", "end end"],
   });
 
-  // Typography animations
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 15]);
-  const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
+  // Typography animations: scale to 8 instead of 15, fade out by 0.35
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 8]);
+  const opacity = useTransform(scrollYProgress, [0, 0.35], [1, 0]);
   
-  // Content reveal animations
-  const contentOpacity = useTransform(scrollYProgress, [0.4, 0.7], [0, 1]);
-  const contentY = useTransform(scrollYProgress, [0.4, 0.7], [50, 0]);
+  // Content reveal animations: start earlier and translate over shorter distance for smoothness
+  const contentOpacity = useTransform(scrollYProgress, [0.35, 0.65], [0, 1]);
+  const contentY = useTransform(scrollYProgress, [0.35, 0.65], [30, 0]);
 
   return (
     <section 
       ref={containerRef} 
       className="relative h-[250vh] bg-[#080808]"
     >
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
+      <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center pointer-events-none">
         
         {/* The Kinetic Word */}
         <motion.div 
-          style={{ scale, opacity }}
-          className="z-10 pointer-events-none"
+          style={{ scale, opacity, willChange: "transform, opacity" }}
+          className="z-10 pointer-events-none transform-gpu"
         >
-          <h2 className="font-serif text-[15vw] font-bold tracking-tighter text-white uppercase leading-none">
+          <h2 className="font-serif text-[15vw] font-bold tracking-tighter text-white uppercase leading-none select-none">
             Timeless
           </h2>
         </motion.div>
 
         {/* The Revealed Philosophy */}
         <motion.div 
-          style={{ opacity: contentOpacity, y: contentY }}
-          className="absolute inset-0 z-20 flex flex-col items-center justify-center px-6 text-center max-w-4xl mx-auto"
+          style={{ opacity: contentOpacity, y: contentY, willChange: "transform, opacity" }}
+          className="absolute inset-0 z-20 flex flex-col items-center justify-center px-6 text-center max-w-4xl mx-auto pointer-events-auto transform-gpu"
         >
           <span className="text-accent uppercase tracking-[0.5em] text-xs mb-8 block font-sans">
             Our Statement

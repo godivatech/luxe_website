@@ -85,7 +85,7 @@ export default function TransformationSection() {
           {/* After image (Background) */}
           <div className="absolute inset-0 w-full h-full">
             <img 
-              src="https://images.unsplash.com/photo-1600210491369-e753d80a41f3?q=80&w=2000&auto=format&fit=crop" 
+              src="/images/befoer after iamges/2.png" 
               alt="After Design" 
               className="w-full h-full object-cover select-none"
               draggable="false"
@@ -96,9 +96,9 @@ export default function TransformationSection() {
           {/* Before image (Foreground clippath) */}
           <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)` }}>
             <img 
-              src="https://images.unsplash.com/photo-1598928308498-80f074d2aa4c?q=80&w=2000&auto=format&fit=crop" 
+              src="/images/befoer after iamges/1.png" 
               alt="Before Design" 
-              className="w-full h-full object-cover blur-[2px] grayscale-[50%] select-none"
+              className="w-full h-full object-cover select-none"
               draggable="false"
             />
             <div className="absolute top-6 left-6 bg-black/50 backdrop-blur-sm px-4 py-2 rounded text-white text-sm font-sans tracking-widest uppercase">Before</div>
