@@ -46,7 +46,7 @@ export default function PhilosophyHero() {
             className="font-serif text-4xl md:text-6xl lg:text-8xl font-bold leading-tight text-white"
           >
             Where beautiful design <br />
-            meets <span className="text-accent italic font-light">everyday life.</span>
+            meets <span className="text-accent italic font-light">everyday life</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

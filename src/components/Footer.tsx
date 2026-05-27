@@ -15,7 +15,7 @@ export default function Footer() {
             className="w-32 h-32 md:w-40 md:h-40 mb-8 object-contain opacity-80"
           />
           <h2 className="font-serif text-5xl md:text-7xl font-bold mb-6">
-            Let&apos;s craft <br /> <span className="text-accent italic">your vision.</span>
+            Let&apos;s craft <br /> <span className="text-accent italic">your vision</span>
           </h2>
           <p className="text-foreground/60 max-w-sm mb-10 text-lg">
             Award-winning luxury interior design based in Madurai, transforming spaces into timeless experiences.

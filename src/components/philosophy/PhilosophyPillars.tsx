@@ -62,7 +62,7 @@ export default function PhilosophyPillars() {
             transition={{ duration: 0.8 }}
             className="font-serif text-3xl md:text-5xl font-bold leading-tight"
           >
-            Our core principles guide every space we design and build.
+            Our core principles guide every space we design and build
           </motion.h2>
         </div>
 

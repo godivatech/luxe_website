@@ -40,7 +40,7 @@ export default function PhilosophyProcess() {
               Our Journey
             </span>
             <h2 className="font-serif text-3xl md:text-5xl font-bold leading-tight mb-8">
-              A careful, step-by-step process from a bare room to a finished home.
+              A careful, step-by-step process from a bare room to a finished home
             </h2>
             <p className="text-foreground/60 leading-relaxed font-sans max-w-md">
               We manage every detail of the project for you. By combining our own custom 
