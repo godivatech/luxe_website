@@ -43,7 +43,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
           url.pathname === window.location.pathname &&
           url.hash
         ) {
-          const element = document.querySelector(url.hash);
+          const element = document.querySelector(url.hash) as HTMLElement | null;
           if (element) {
             e.preventDefault();
             lenis.scrollTo(element, { offset: 0, duration: 1.2 });
@@ -61,7 +61,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     if (window.location.hash) {
       const initialHash = window.location.hash;
       setTimeout(() => {
-        const element = document.querySelector(initialHash);
+        const element = document.querySelector(initialHash) as HTMLElement | null;
         if (element) {
           lenis.scrollTo(element, { offset: 0, duration: 1.2, immediate: false });
         }
@@ -81,7 +81,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     const hash = window.location.hash;
     if (hash) {
       setTimeout(() => {
-        const element = document.querySelector(hash);
+        const element = document.querySelector(hash) as HTMLElement | null;
         if (element && lenisRef.current) {
           lenisRef.current.scrollTo(element, { offset: 0, duration: 1.2, immediate: false });
         }
