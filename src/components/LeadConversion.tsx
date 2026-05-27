@@ -43,7 +43,7 @@ export default function LeadConversion() {
             Get in touch <ArrowRight size={18} />
           </a>
           <a 
-            href="https://wa.me/91XXXXXXXXXX" 
+            href="https://wa.me/917868016007?text=Hello%20LUXE%20Interiors%2C%20I%20would%20like%20to%20inquire%20about%20a%20design%20consultation%20for%20my%20space." 
             target="_blank" 
             rel="noopener noreferrer" 
             className="w-full md:w-auto flex items-center gap-2 border border-black/20 px-10 py-5 rounded-full hover:bg-black/5 transition-colors font-semibold justify-center"

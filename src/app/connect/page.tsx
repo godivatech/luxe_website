@@ -54,7 +54,7 @@ export default function ConnectPage() {
                 <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2">Connect Instantly</h4>
                 <p className="text-xl font-medium mb-2">+91 78680 16007</p>
                 <a 
-                  href="https://wa.me/917868016007" 
+                  href="https://wa.me/917868016007?text=Hello%20LUXE%20Interiors%2C%20I%20would%20like%20to%20inquire%20about%20a%20design%20consultation%20for%20my%20space." 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-accent hover:underline flex items-center gap-2"
