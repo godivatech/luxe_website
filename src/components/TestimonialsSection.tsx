@@ -38,7 +38,7 @@ export default function TestimonialsSection() {
           {[...testimonials, ...testimonials].map((t, i) => (
             <div 
               key={i} 
-              className="bg-background/50 border border-white/5 p-6 md:p-8 rounded-2xl min-w-[280px] md:min-w-[450px] whitespace-normal flex-shrink-0"
+              className="bg-[#0a0a0a]/50 border border-white/5 p-6 md:p-8 rounded-2xl min-w-[280px] md:min-w-[450px] whitespace-normal flex-shrink-0"
             >
               <p className="font-serif text-base md:text-xl leading-relaxed mb-6 md:mb-8 text-white/90">
                 &quot;{t.quote}&quot;
