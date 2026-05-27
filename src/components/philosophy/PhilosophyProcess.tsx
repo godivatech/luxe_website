@@ -5,27 +5,27 @@ import { motion } from "framer-motion";
 const steps = [
   {
     num: "01",
-    phase: "Spatial Audit & Discovery",
-    title: "Understanding physical geometry & client aspirations",
-    desc: "We begin with a thorough survey of structural elements. We analyze views, sound profiles, traffic flows, and natural lighting patterns, alongside a detailed conversation about your lifestyle or business brand requirements.",
+    phase: "Consultation & Survey",
+    title: "Understanding your space and vision",
+    desc: "We start by visiting your space to study its layout, natural light, and views. We then sit down for an open conversation about your routine, style preference, and how you want to use the space.",
   },
   {
     num: "02",
-    phase: "Spatial Modeling & Curation",
-    title: "Moodboards, textures, and 3D simulation",
-    desc: "We build high-fidelity layout proposals and material boards. We compile tangible, physical samples (wood, fabrics, stones) alongside 3D renderings so you can touch, see, and experience the textures before execution starts.",
+    phase: "Design & Visualization",
+    title: "Choosing textures, colors, and 3D views",
+    desc: "We create detailed 3D layouts and prepare material boards. We share real physical samples of wood, stone, and fabrics so you can see and touch the materials before construction begins.",
   },
   {
     num: "03",
-    phase: "Bespoke Manufacturing",
-    title: "Custom joinery production & detail coordination",
-    desc: "Bespoke components are fabricated at our local workshop to ensure complete oversight and precision. From hidden joints to customized fittings, our master craftsman build components specifically for your dimensions.",
+    phase: "Custom Workshop Crafting",
+    title: "Building your custom furniture and cabinets",
+    desc: "Our master craftsmen build your custom wardrobes, kitchens, and furniture at our local workshop. This keeps quality control high and ensures every piece is built to your home's exact size.",
   },
   {
     num: "04",
-    phase: "Turnkey Installation",
-    title: "On-site choreography & quality hand-over",
-    desc: "Our design consultants supervise on-site assembly, ensuring perfect alignment, seamless electrical pathways, and flawless integration of finishes. We handover the keys only when every detail matches our luxury standard.",
+    phase: "Complete Installation",
+    title: "On-site management and final handover",
+    desc: "Our design team manages the entire on-site setup, coordinating painters, electricians, and carpenters. We check every detail to ensure everything is perfect before we hand you the keys to your new home.",
   },
 ];
 
@@ -40,12 +40,12 @@ export default function PhilosophyProcess() {
               Our Journey
             </span>
             <h2 className="font-serif text-3xl md:text-5xl font-bold leading-tight mb-8">
-              Meticulous process, from empty shell to curated residence.
+              A careful, step-by-step process from a bare room to a finished home.
             </h2>
             <p className="text-foreground/60 leading-relaxed font-sans max-w-md">
-              We coordinate every single stage of the execution lifecycle. By combining 
-              in-house manufacturing with turnkey site supervision, we guarantee 
-              that the final physical space matches the original design render.
+              We manage every detail of the project for you. By combining our own custom 
+              furniture workshop with active on-site supervision, we guarantee that the 
+              final space looks exactly like the approved 3D design.
             </p>
             <div className="hidden lg:block mt-16 w-16 h-[1px] bg-accent" />
           </div>

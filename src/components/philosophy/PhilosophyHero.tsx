@@ -37,7 +37,7 @@ export default function PhilosophyHero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-accent uppercase tracking-[0.3em] text-xs md:text-sm mb-6 block font-sans font-semibold"
           >
-            Our Design Manifesto
+            Our Design Values
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -45,8 +45,8 @@ export default function PhilosophyHero() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             className="font-serif text-4xl md:text-6xl lg:text-8xl font-bold leading-tight text-white"
           >
-            Where spatial geometry <br />
-            meets <span className="text-accent italic font-light">human narrative.</span>
+            Where beautiful design <br />
+            meets <span className="text-accent italic font-light">everyday life.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -54,8 +54,9 @@ export default function PhilosophyHero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mt-8 font-sans text-lg md:text-xl text-foreground/60 max-w-2xl leading-relaxed"
           >
-            At LUXE, we view walls and ceilings not as constraints, but as opportunities 
-            to choreograph light, texture, and silence into functional art.
+            At LUXE, we look beyond the structure. We shape natural light, clean spaces, 
+            and premium textures to create rooms that feel open, peaceful, and perfectly 
+            suited to your lifestyle.
           </motion.p>
         </div>
       </div>

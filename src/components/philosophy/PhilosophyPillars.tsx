@@ -6,21 +6,21 @@ import { Compass, Eye, ShieldAlert, Award, Feather, Layers } from "lucide-react"
 const pillars = [
   {
     icon: Compass,
-    title: "Spatial Honesty",
-    subtitle: "Choreographing flow & light",
-    desc: "We design layouts around how people move and interact. By studying natural lighting trajectories, ceiling heights, and air circulation, we ensure the structural layout is fundamentally comfortable before adding any decor.",
+    title: "Smart Layouts",
+    subtitle: "Designed for comfort & light",
+    desc: "We plan layouts around how you actually live and move. By focusing on natural light, air circulation, and ceiling heights, we ensure your rooms feel warm, spacious, and comfortable before adding a single piece of furniture.",
   },
   {
     icon: Layers,
-    title: "Material Authenticity",
-    subtitle: "Textures that tell stories",
-    desc: "We prioritize authentic materials—natural stone patterns, custom-milled teak wood, glass, and raw metals. These textures respond uniquely to lighting and age with character over years of occupancy.",
+    title: "Real Materials",
+    subtitle: "Selected for lasting beauty",
+    desc: "We use only genuine, premium materials—natural marble stone, solid teak wood, glass, and polished metals. These materials react beautifully to light and grow even more character over the years.",
   },
   {
     icon: Feather,
-    title: "Custom Identity",
-    subtitle: "Bespoke craftsmanship",
-    desc: "Luxury is personalized. Every project includes uniquely tailored joinery, bespoke furniture detailing, and hand-selected fixtures created specifically for the owner, ensuring it cannot be replicated elsewhere.",
+    title: "Personal Touch",
+    subtitle: "Custom-built details",
+    desc: "True luxury is personal. We design custom wardrobes, tailored furniture, and unique accents specifically for your home. Everything is built to fit your lifestyle, ensuring a look that is completely yours.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function PhilosophyPillars() {
             viewport={{ once: true }}
             className="text-accent uppercase tracking-widest text-xs font-semibold block mb-4"
           >
-            The Tenets
+            Our Principles
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -62,7 +62,7 @@ export default function PhilosophyPillars() {
             transition={{ duration: 0.8 }}
             className="font-serif text-3xl md:text-5xl font-bold leading-tight"
           >
-            Our core pillars represent a commitment to architectural truth.
+            Our core principles guide every space we design and build.
           </motion.h2>
         </div>
 
@@ -96,7 +96,7 @@ export default function PhilosophyPillars() {
                   </p>
                 </div>
                 <div className="mt-8 pt-6 border-t border-white/5 text-xs text-accent uppercase tracking-widest font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  Tenet 0{index + 1}
+                  Principle 0{index + 1}
                 </div>
               </motion.div>
             );

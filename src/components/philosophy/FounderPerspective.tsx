@@ -50,9 +50,9 @@ export default function FounderPerspective() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="font-serif text-2xl md:text-4xl italic text-white/90 leading-snug"
             >
-              &quot;Design is not just an aesthetic layer; it is the physical manifestation of how 
-              you live, breathe, and interact with your surrounding environment. True luxury lies 
-              in creating functional layouts that feel effortless.&quot;
+              &quot;Great design is more than just making a room look pretty. It shapes how you live, 
+              move, and feel in your home every day. To me, true luxury means creating spaces 
+              that function beautifully and feel effortless.&quot;
             </motion.blockquote>
 
             <motion.div
@@ -63,15 +63,14 @@ export default function FounderPerspective() {
               className="space-y-6 text-foreground/75 leading-relaxed font-sans text-base"
             >
               <p>
-                Since establishing LUXE in 2018 in Madurai, our design ethos has centered on 
-                restraint and precision. We resist transient design trends that fade within seasons, 
-                focusing instead on tailored, spatial configurations that remain elegant, durable, 
-                and satisfying over years.
+                Since starting LUXE in 2018 in Madurai, our focus has always been simple: 
+                timeless design built with care. We avoid passing trends that fade in a few 
+                seasons, choosing layouts and styles that remain elegant and durable for years.
               </p>
               <p>
-                Every marble choice, hidden electrical pathway, and custom joint is coordinated 
-                with our fabricators. This unified approach removes guesswork from the installation, 
-                delivering premium turnkey spaces that perfectly align with our clients&apos; aspirations.
+                We coordinate every detail—from selecting the right marble slabs to planning 
+                hidden wiring and custom woodwork. This complete care removes all stress for you, 
+                delivering a finished home that matches your exact dreams.
               </p>
             </motion.div>
 
