@@ -18,7 +18,7 @@ export default function BrandIntro() {
     <section id="philosophy" ref={container} className="py-32 md:py-64 bg-background px-6">
       <div className="container mx-auto max-w-5xl">
         <motion.div style={{ opacity, y }} className="text-center">
-          <h2 className="font-serif text-3xl md:text-5xl lg:text-7xl leading-snug">
+          <h2 className="font-serif text-3xl md:text-5xl lg:text-7xl leading-snug tracking-tight text-foreground">
             Since 2018, we have been <br className="hidden md:block" />
             <span className="text-accent italic">transforming visions</span> into elegant, functional, and timeless reality.
           </h2>

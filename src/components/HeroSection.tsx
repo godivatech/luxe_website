@@ -34,7 +34,7 @@ export default function HeroSection() {
           <span className="text-accent uppercase tracking-[0.3em] text-xs md:text-sm mb-6 block font-sans font-semibold">
             Welcome to LUXE
           </span>
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl font-bold leading-tight mb-8 text-white">
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl font-bold leading-tight mb-8 text-white tracking-tight">
             Elevating Spaces,<br />
             <span className="italic font-light text-white/90 text-4xl md:text-6xl lg:text-7xl block mt-4">Turning spaces into <br className="md:hidden" /> luxury statements.</span>
           </h1>
