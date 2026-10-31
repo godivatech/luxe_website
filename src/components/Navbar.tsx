@@ -5,11 +5,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Pages with a dark hero background photography at the top
+  const isDarkHeroPage = pathname === "/" || pathname === "/philosophy";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +35,14 @@ export default function Navbar() {
     };
   }, [mobileMenuOpen]);
 
+  // Dynamic link styling: luminous white over dark hero photography, dark charcoal when scrolled onto the frosted bar
+  const navLinkClasses = clsx(
+    "text-sm uppercase tracking-widest transition-colors duration-300 font-medium",
+    !isScrolled && isDarkHeroPage
+      ? "text-white/95 hover:text-accent drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]"
+      : "text-foreground/80 hover:text-accent"
+  );
+
   return (
     <>
       <motion.header
@@ -38,7 +51,9 @@ export default function Navbar() {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={clsx(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-          isScrolled ? "bg-background/90 backdrop-blur-md py-4 border-b border-border shadow-[0_2px_20px_rgba(22,21,20,0.04)]" : "bg-transparent py-6"
+          isScrolled 
+            ? "bg-background/90 backdrop-blur-md py-4 border-b border-border shadow-[0_2px_20px_rgba(22,21,20,0.04)]" 
+            : "bg-transparent py-6"
         )}
       >
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -54,22 +69,31 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-10">
-            <Link href="/#gallery" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
+            <Link href="/#gallery" className={navLinkClasses}>
               Spaces
             </Link>
-            <Link href="/philosophy" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
+            <Link href="/philosophy" className={navLinkClasses}>
               Philosophy
             </Link>
-            <Link href="/portfolio" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
+            <Link href="/portfolio" className={navLinkClasses}>
               Portfolio
             </Link>
-            <Link href="/connect" className="text-sm uppercase tracking-widest text-foreground/80 hover:text-accent transition-colors">
+            <Link href="/connect" className={navLinkClasses}>
               Connect
             </Link>
           </nav>
 
           {/* Mobile Toggle */}
-          <button className="md:hidden text-foreground z-50 relative" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <button 
+            className={clsx(
+              "md:hidden z-50 relative transition-colors duration-300",
+              mobileMenuOpen 
+                ? "text-foreground" 
+                : (!isScrolled && isDarkHeroPage ? "text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]" : "text-foreground")
+            )} 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation menu"
+          >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
