@@ -61,9 +61,9 @@ export default function PortfolioMasonry() {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                  <span className="text-accent text-sm tracking-widest uppercase mb-2 block transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 font-semibold">{project.category}</span>
-                  <h3 className="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">{project.title}</h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 md:p-8">
+                  <span className="text-accent text-xs md:text-sm tracking-widest uppercase mb-1.5 md:mb-2 block transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 font-semibold">{project.category}</span>
+                  <h3 className="font-serif text-2xl md:text-3xl text-white transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 delay-75">{project.title}</h3>
                 </div>
               </Link>
             </motion.div>
