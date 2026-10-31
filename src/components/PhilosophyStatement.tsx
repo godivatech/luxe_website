@@ -12,24 +12,24 @@ export default function PhilosophyStatement() {
   });
 
   // Architectural Frame Expansion:
-  // Starts as an elegant framed window and expands smoothly to envelop the screen across both mobile and desktop
-  const frameScale = useTransform(scrollYProgress, [0, 0.45], [0.82, 1.55]);
-  const frameRadius = useTransform(scrollYProgress, [0, 0.35], ["24px", "0px"]);
+  // Expands smoothly and completes without any dead scroll delay
+  const frameScale = useTransform(scrollYProgress, [0, 0.7], [0.82, 1.55]);
+  const frameRadius = useTransform(scrollYProgress, [0, 0.5], ["24px", "0px"]);
   
   // Inner image subtle counter-zoom for high-end optical depth
-  const imageScale = useTransform(scrollYProgress, [0, 0.5], [1.25, 1.05]);
+  const imageScale = useTransform(scrollYProgress, [0, 0.75], [1.2, 1.05]);
 
   // Dark editorial atmospheric overlay deepens as the frame expands to ensure flawless text legibility
-  const overlayOpacity = useTransform(scrollYProgress, [0.15, 0.45], [0.25, 0.75]);
+  const overlayOpacity = useTransform(scrollYProgress, [0.15, 0.65], [0.25, 0.75]);
 
-  // Philosophy quote reveals as the frame envelops the viewport
-  const contentOpacity = useTransform(scrollYProgress, [0.35, 0.58], [0, 1]);
-  const contentY = useTransform(scrollYProgress, [0.35, 0.58], [35, 0]);
+  // Philosophy quote reveals as the frame envelops the viewport and settles cleanly
+  const contentOpacity = useTransform(scrollYProgress, [0.35, 0.8], [0, 1]);
+  const contentY = useTransform(scrollYProgress, [0.35, 0.8], [30, 0]);
 
   return (
     <section 
       ref={containerRef} 
-      className="relative h-[240vh] bg-background border-y border-border"
+      className="relative h-[160vh] bg-background border-y border-border"
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
         
