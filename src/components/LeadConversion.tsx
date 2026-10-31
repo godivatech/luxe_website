@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa6";
 
 export default function LeadConversion() {
   return (
@@ -48,7 +49,7 @@ export default function LeadConversion() {
             rel="noopener noreferrer" 
             className="w-full md:w-auto flex items-center gap-2 border border-white/40 text-white px-10 py-5 rounded-full hover:bg-white/10 transition-colors font-semibold justify-center"
           >
-            <MessageCircle size={18} /> WhatsApp
+            <FaWhatsapp size={20} className="text-[#25D366]" /> WhatsApp
           </a>
         </motion.div>
       </div>

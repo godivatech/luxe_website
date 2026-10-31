@@ -1,4 +1,5 @@
-import { ArrowRight, MessageCircle, MapPin, Mail, Phone } from "lucide-react";
+import { ArrowRight, MapPin, Mail, Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa6";
 
 export default function ConnectPage() {
   return (
@@ -48,7 +49,7 @@ export default function ConnectPage() {
 
             <div className="flex gap-6">
               <div className="w-12 h-12 bg-[#25D366]/10 rounded-full flex items-center justify-center text-[#25D366] shrink-0">
-                <MessageCircle size={24} />
+                <FaWhatsapp size={24} />
               </div>
               <div>
                 <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2 font-medium">Connect Instantly</h4>
