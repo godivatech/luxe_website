@@ -12,7 +12,7 @@ export default function PhilosophyStatement() {
   });
 
   // Architectural Frame Expansion:
-  // Starts as an elegant framed window (scale 0.72) and expands smoothly to envelop the screen (scale 1.35)
+  // Starts as an elegant framed window (scale 0.75) and expands smoothly to envelop the screen (scale 1.35)
   const frameScale = useTransform(scrollYProgress, [0, 0.45], [0.75, 1.35]);
   const frameRadius = useTransform(scrollYProgress, [0, 0.35], ["24px", "0px"]);
   
@@ -21,9 +21,6 @@ export default function PhilosophyStatement() {
 
   // Dark editorial atmospheric overlay deepens as the frame expands to ensure flawless text legibility
   const overlayOpacity = useTransform(scrollYProgress, [0.15, 0.45], [0.25, 0.72]);
-
-  // Initial subtitle tag inside the framed window (fades as you expand into the room)
-  const badgeOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   // Philosophy quote reveals as the frame envelops the viewport
   const contentOpacity = useTransform(scrollYProgress, [0.35, 0.58], [0, 1]);
@@ -59,15 +56,6 @@ export default function PhilosophyStatement() {
             style={{ opacity: overlayOpacity }}
             className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/60 to-black/90 pointer-events-none"
           />
-
-          {/* Initial Frame Badge (Visible before expanding) */}
-          <motion.div 
-            style={{ opacity: badgeOpacity }}
-            className="absolute bottom-6 left-6 md:bottom-8 md:left-8 z-10 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white flex items-center gap-2"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            <span className="text-[11px] font-sans uppercase tracking-[0.2em]">LUXE Architectural Showcase</span>
-          </motion.div>
         </motion.div>
 
         {/* The Revealed Philosophy Statement (Floats over the full-bleed space) */}
