@@ -11,16 +11,16 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-24 md:py-32 bg-[#121212] overflow-hidden flex flex-col justify-center">
+    <section className="py-24 md:py-32 bg-surface-muted border-y border-border overflow-hidden flex flex-col justify-center">
       <div className="container mx-auto px-6 text-center mb-16">
         <h2 className="text-xl md:text-2xl text-accent font-serif italic mb-2">Words from our clients</h2>
-        <h3 className="font-serif text-3xl md:text-5xl font-bold">Tested & Trusted</h3>
+        <h3 className="font-serif text-3xl md:text-5xl font-bold text-foreground">Tested & Trusted</h3>
       </div>
       
       <div className="relative w-full flex overflow-hidden">
         {/* Gradient fades for edges */}
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-[#121212] to-transparent z-10" />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-[#121212] to-transparent z-10" />
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-surface-muted to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-surface-muted to-transparent z-10" />
         
         {/* Marquee Track */}
         <motion.div 
@@ -38,14 +38,14 @@ export default function TestimonialsSection() {
           {[...testimonials, ...testimonials].map((t, i) => (
             <div 
               key={i} 
-              className="bg-[#0a0a0a]/50 border border-white/5 p-6 md:p-8 rounded-2xl min-w-[280px] md:min-w-[450px] whitespace-normal flex-shrink-0"
+              className="bg-surface border border-border shadow-[0_4px_24px_rgba(22,21,20,0.04)] p-6 md:p-8 rounded-2xl min-w-[280px] md:min-w-[450px] whitespace-normal flex-shrink-0"
             >
-              <p className="font-serif text-base md:text-xl leading-relaxed mb-6 md:mb-8 text-white/90">
+              <p className="font-serif text-base md:text-xl leading-relaxed mb-6 md:mb-8 text-foreground/90">
                 &quot;{t.quote}&quot;
               </p>
               <div>
-                <p className="font-bold text-xs md:text-sm tracking-widest uppercase">{t.author}</p>
-                <p className="text-foreground/50 text-[10px] md:text-xs tracking-widest uppercase mt-1">{t.role}</p>
+                <p className="font-bold text-xs md:text-sm tracking-widest uppercase text-foreground">{t.author}</p>
+                <p className="text-foreground/60 text-[10px] md:text-xs tracking-widest uppercase mt-1">{t.role}</p>
               </div>
             </div>
           ))}

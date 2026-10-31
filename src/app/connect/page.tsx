@@ -6,11 +6,11 @@ export default function ConnectPage() {
       <section className="pt-48 pb-24 px-6 md:px-12">
         <div className="container mx-auto">
           <div className="max-w-4xl">
-            <h1 className="font-serif text-6xl md:text-8xl font-bold mb-8 leading-tight">
+            <h1 className="font-serif text-6xl md:text-8xl font-bold mb-8 leading-tight text-foreground">
               Let&apos;s talk about <br />
               <span className="text-accent italic">your project</span>
             </h1>
-            <p className="font-sans text-xl md:text-2xl text-foreground/60 max-w-2xl">
+            <p className="font-sans text-xl md:text-2xl text-foreground/65 max-w-2xl leading-relaxed">
               Whether you have a specific vision or just want to explore possibilities, 
               we&apos;re here to help you create a space that reflects your luxury lifestyle.
             </p>
@@ -23,12 +23,12 @@ export default function ConnectPage() {
           {/* Contact Info */}
           <div className="space-y-12">
             <div className="flex gap-6">
-              <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-accent shrink-0">
+              <div className="w-12 h-12 bg-surface-muted border border-border rounded-full flex items-center justify-center text-accent shrink-0">
                 <MapPin size={24} />
               </div>
               <div>
-                <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2">Our Studio</h4>
-                <p className="text-xl">
+                <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2 font-medium">Our Studio</h4>
+                <p className="text-xl text-foreground">
                   11a Navalar nagar 3rd street,<br />
                   ss colony, Madurai - 625010<br />
                   Tamil Nadu, India
@@ -37,12 +37,12 @@ export default function ConnectPage() {
             </div>
 
             <div className="flex gap-6">
-              <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-accent shrink-0">
+              <div className="w-12 h-12 bg-surface-muted border border-border rounded-full flex items-center justify-center text-accent shrink-0">
                 <Mail size={24} />
               </div>
               <div>
-                <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2">Email Us</h4>
-                <p className="text-xl font-medium">luxeinteriordecors@gmail.com</p>
+                <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2 font-medium">Email Us</h4>
+                <p className="text-xl font-medium text-foreground">luxeinteriordecors@gmail.com</p>
               </div>
             </div>
 
@@ -51,73 +51,73 @@ export default function ConnectPage() {
                 <MessageCircle size={24} />
               </div>
               <div>
-                <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2">Connect Instantly</h4>
-                <p className="text-xl font-medium mb-2">+91 78680 16007</p>
+                <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2 font-medium">Connect Instantly</h4>
+                <p className="text-xl font-medium mb-2 text-foreground">+91 78680 16007</p>
                 <a 
                   href="https://wa.me/917868016007?text=Hello%20LUXE%20Interiors%2C%20I%20would%20like%20to%20inquire%20about%20a%20design%20consultation%20for%20my%20space." 
                   target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-accent hover:underline flex items-center gap-2"
+                  rel="noopener noreferrer" 
+                  className="text-accent hover:underline flex items-center gap-2 font-medium"
                 >
                   Chat on WhatsApp <ArrowRight size={16} />
                 </a>
               </div>
             </div>
 
-            <div className="pt-8 border-t border-white/5 space-y-4">
-              <h4 className="text-sm uppercase tracking-widest text-foreground/40">Direct Contact</h4>
+            <div className="pt-8 border-t border-border space-y-4">
+              <h4 className="text-sm uppercase tracking-widest text-foreground/40 font-medium">Direct Contact</h4>
               <div>
-                <p className="text-lg">Asraf ali.s</p>
+                <p className="text-lg font-medium text-foreground">Asraf ali.s</p>
                 <p className="text-foreground/60">+91 97513 48944</p>
               </div>
               <div className="pt-4">
-                <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2">Office Hours</h4>
+                <h4 className="text-sm uppercase tracking-widest text-foreground/40 mb-2 font-medium">Office Hours</h4>
                 <p className="text-foreground/80">Mon - Sat: 10.00 AM - 7.00 PM</p>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white/5 p-8 md:p-12 rounded-2xl border border-white/5">
+          <div className="bg-surface p-8 md:p-12 rounded-2xl border border-border shadow-[0_8px_30px_rgba(22,21,20,0.04)]">
             <form className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-widest text-foreground/40">Your Name</label>
+                  <label className="text-xs uppercase tracking-widest text-foreground/40 font-medium">Your Name</label>
                   <input 
                     type="text" 
-                    className="w-full bg-transparent border-b border-white/10 py-3 focus:outline-none focus:border-accent transition-colors"
+                    className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-accent transition-colors text-foreground placeholder:text-foreground/30"
                     placeholder="Enter name"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-widest text-foreground/40">Email Address</label>
+                  <label className="text-xs uppercase tracking-widest text-foreground/40 font-medium">Email Address</label>
                   <input 
                     type="email" 
-                    className="w-full bg-transparent border-b border-white/10 py-3 focus:outline-none focus:border-accent transition-colors"
+                    className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-accent transition-colors text-foreground placeholder:text-foreground/30"
                     placeholder="Enter email"
                   />
                 </div>
               </div>
               
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest text-foreground/40">Subject</label>
-                <select className="w-full bg-transparent border-b border-white/10 py-3 focus:outline-none focus:border-accent transition-colors appearance-none">
-                  <option className="bg-background">Residential Design</option>
-                  <option className="bg-background">Commercial Design</option>
-                  <option className="bg-background">Other Inquiry</option>
+                <label className="text-xs uppercase tracking-widest text-foreground/40 font-medium">Subject</label>
+                <select className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-accent transition-colors appearance-none text-foreground">
+                  <option className="bg-surface text-foreground">Residential Design</option>
+                  <option className="bg-surface text-foreground">Commercial Design</option>
+                  <option className="bg-surface text-foreground">Other Inquiry</option>
                 </select>
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest text-foreground/40">Message</label>
+                <label className="text-xs uppercase tracking-widest text-foreground/40 font-medium">Message</label>
                 <textarea 
                   rows={4}
-                  className="w-full bg-transparent border-b border-white/10 py-3 focus:outline-none focus:border-accent transition-colors resize-none"
+                  className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-accent transition-colors resize-none text-foreground placeholder:text-foreground/30"
                   placeholder="How can we help?"
                 />
               </div>
 
-              <button className="flex items-center gap-3 bg-accent text-accent-foreground px-10 py-5 rounded-full font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform">
+              <button className="flex items-center gap-3 bg-foreground text-background px-10 py-5 rounded-full font-bold uppercase tracking-widest text-sm hover:opacity-90 transition-opacity shadow-md">
                 Send Inquiry <ArrowRight size={18} />
               </button>
             </form>

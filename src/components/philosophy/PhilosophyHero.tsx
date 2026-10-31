@@ -52,7 +52,7 @@ export default function PhilosophyHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-8 font-sans text-lg md:text-xl text-foreground/60 max-w-2xl leading-relaxed"
+            className="mt-8 font-sans text-lg md:text-xl text-white/85 max-w-2xl leading-relaxed"
           >
             At LUXE, we look beyond the structure. We shape natural light, clean spaces, 
             and premium textures to create rooms that feel open, peaceful, and perfectly 

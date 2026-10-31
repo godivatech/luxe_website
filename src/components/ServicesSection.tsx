@@ -18,14 +18,14 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="spaces" className="py-24 md:py-48 px-6 bg-[#0E0E0E]">
+    <section id="spaces" className="py-24 md:py-48 px-6 bg-surface-muted border-y border-border">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center mb-20 gap-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-serif text-4xl md:text-6xl font-bold"
+            className="font-serif text-4xl md:text-6xl font-bold text-foreground"
           >
             Our Expertise
           </motion.h2>
@@ -50,20 +50,20 @@ export default function ServicesSection() {
               transition={{ delay: index * 0.2, duration: 0.8 }}
               className="group cursor-pointer block"
             >
-              <div className="relative overflow-hidden aspect-[4/5] mb-6">
+              <div className="relative overflow-hidden aspect-[4/5] mb-6 rounded-xl shadow-[0_8px_30px_rgba(22,21,20,0.06)] bg-surface">
                 <img 
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
               </div>
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-2xl font-serif mb-2 group-hover:text-accent transition-colors">{service.title}</h3>
+                  <h3 className="text-2xl font-serif mb-2 text-foreground group-hover:text-accent transition-colors">{service.title}</h3>
                   <p className="text-foreground/60 text-sm md:text-base">{service.desc}</p>
                 </div>
-                <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-accent group-hover:bg-accent group-hover:text-background transition-all flex-shrink-0 ml-4">
+                <div className="w-10 h-10 rounded-full border border-border bg-surface flex items-center justify-center group-hover:border-accent group-hover:bg-accent group-hover:text-white transition-all flex-shrink-0 ml-4 text-foreground">
                   <ArrowUpRight size={20} />
                 </div>
               </div>

@@ -53,7 +53,7 @@ export default function PortfolioMasonry() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: i * 0.1, duration: 0.8 }}
-              className={`relative group overflow-hidden ${project.className} aspect-square md:aspect-auto`}
+              className={`relative group overflow-hidden ${project.className} aspect-square md:aspect-auto rounded-xl shadow-[0_8px_30px_rgba(22,21,20,0.06)]`}
             >
               <Link href={`/portfolio/${project.id}`} className="block w-full h-full">
                 <img
@@ -61,8 +61,8 @@ export default function PortfolioMasonry() {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                  <span className="text-accent text-sm tracking-widest uppercase mb-2 block transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{project.category}</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                  <span className="text-accent text-sm tracking-widest uppercase mb-2 block transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 font-semibold">{project.category}</span>
                   <h3 className="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">{project.title}</h3>
                 </div>
               </Link>

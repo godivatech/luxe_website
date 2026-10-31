@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function FounderPerspective() {
   return (
-    <section className="py-24 md:py-36 bg-[#0c0c0c] px-6 relative overflow-hidden">
+    <section className="py-24 md:py-36 bg-background px-6 relative overflow-hidden">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
           {/* Portrait Column */}
@@ -18,7 +18,7 @@ export default function FounderPerspective() {
             {/* Outline Decorative box */}
             <div className="absolute -inset-4 border border-accent/20 rounded-2xl pointer-events-none hidden md:block" />
 
-            <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-white/5">
+            <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-surface-muted border border-border shadow-[0_8px_30px_rgba(22,21,20,0.06)]">
               {/* <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200&auto=format&fit=crop"
                 alt="Asraf Ali S. — Lead Designer"
@@ -48,7 +48,7 @@ export default function FounderPerspective() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-serif text-2xl md:text-4xl italic text-white/90 leading-snug"
+              className="font-serif text-2xl md:text-4xl italic text-foreground leading-snug"
             >
               &quot;Great design is more than just making a room look pretty. It shapes how you live, 
               move, and feel in your home every day. To me, true luxury means creating spaces 
@@ -80,10 +80,10 @@ export default function FounderPerspective() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="pt-6 border-t border-white/5 flex gap-8 items-center"
+              className="pt-6 border-t border-border flex gap-8 items-center"
             >
               <div>
-                <p className="font-serif text-lg text-white">Asraf Ali. S</p>
+                <p className="font-serif text-lg text-foreground font-bold">Asraf Ali. S</p>
                 <p className="text-foreground/40 text-xs uppercase tracking-widest mt-1">Founding Director, LUXE</p>
               </div>
             </motion.div>

@@ -11,8 +11,8 @@ export default function PhilosophyStatement() {
     offset: ["start start", "end end"],
   });
 
-  // Typography animations: scale to 8 instead of 15, fade out by 0.35
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 8]);
+  // Typography animations: scale 8x (from 0.1875 to 1.5), starting from 80vw base size to prevent blurriness and wrapping
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0.1875, 1.5]);
   const opacity = useTransform(scrollYProgress, [0, 0.35], [1, 0]);
   
   // Content reveal animations: start earlier and translate over shorter distance for smoothness
@@ -22,16 +22,16 @@ export default function PhilosophyStatement() {
   return (
     <section 
       ref={containerRef} 
-      className="relative h-[250vh] bg-[#080808]"
+      className="relative h-[250vh] bg-surface-muted border-y border-border"
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center pointer-events-none">
         
         {/* The Kinetic Word */}
         <motion.div 
           style={{ scale, opacity, willChange: "transform, opacity" }}
-          className="z-10 pointer-events-none transform-gpu"
+          className="z-10 pointer-events-none transform-gpu scale-[0.1875]"
         >
-          <h2 className="font-serif text-[15vw] font-bold tracking-tighter text-white uppercase leading-none select-none">
+          <h2 className="font-serif text-[80vw] font-bold tracking-tighter text-foreground/[0.06] uppercase leading-none select-none whitespace-nowrap">
             Timeless
           </h2>
         </motion.div>
@@ -41,15 +41,15 @@ export default function PhilosophyStatement() {
           style={{ opacity: contentOpacity, y: contentY, willChange: "transform, opacity" }}
           className="absolute inset-0 z-20 flex flex-col items-center justify-center px-6 text-center max-w-4xl mx-auto pointer-events-auto transform-gpu"
         >
-          <span className="text-accent uppercase tracking-[0.5em] text-xs mb-8 block font-sans">
+          <span className="text-accent uppercase tracking-[0.5em] text-xs mb-8 block font-sans font-semibold">
             Our Statement
           </span>
-          <h3 className="font-serif text-3xl md:text-5xl lg:text-6xl italic text-white leading-tight mb-12">
+          <h3 className="font-serif text-3xl md:text-5xl lg:text-6xl italic text-foreground leading-tight mb-12">
             &quot;We don&apos;t follow trends; <br />
             we create environments that <br /> 
-            <span className="text-accent">outlast them.</span>&quot;
+            <span className="text-accent font-normal">outlast them.</span>&quot;
           </h3>
-          <p className="text-white/50 text-lg md:text-xl font-sans max-w-2xl leading-relaxed">
+          <p className="text-foreground/70 text-lg md:text-xl font-sans max-w-2xl leading-relaxed">
             Every LUXE space is a balance of heritage and innovation. We believe that true luxury 
             isn&apos;t just about how a room looks—it&apos;s about how it endures through time, 
             evolving with those who inhabit it.
@@ -59,9 +59,9 @@ export default function PhilosophyStatement() {
         </motion.div>
 
         {/* Subtle Background Elements */}
-        <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute inset-0 z-0 opacity-40">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-900/10 rounded-full blur-[120px]" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-[120px]" />
         </div>
       </div>
     </section>

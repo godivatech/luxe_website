@@ -31,13 +31,13 @@ const materials = [
 
 export default function MaterialityGrid() {
   return (
-    <section className="py-24 md:py-36 bg-[#090909] px-6 border-b border-white/5">
+    <section className="py-24 md:py-36 bg-surface-muted px-6 border-b border-border">
       <div className="container mx-auto">
         <div className="text-center mb-20 max-w-2xl mx-auto">
           <span className="text-accent uppercase tracking-widest text-xs font-semibold block mb-4">
             Materiality
           </span>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6 text-foreground">
             The Craft of Textures
           </h2>
           <p className="text-foreground/60 leading-relaxed font-sans text-sm md:text-base">

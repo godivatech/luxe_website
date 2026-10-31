@@ -1,17 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #fafafa;
-  --accent: #d4af37;
+  /* Warm Alabaster & Bronze - Luxury Light Aesthetic */
+  --background: #FBF9F5;
+  --foreground: #161514;
+  --surface: #FFFFFF;
+  --surface-muted: #F3EFE6;
+  --surface-subtle: #EAE4D6;
+  --border: rgba(22, 21, 20, 0.08);
+  --border-subtle: rgba(22, 21, 20, 0.04);
+  --accent: #9E7B3B;
+  --accent-foreground: #FFFFFF;
+  --accent-muted: rgba(158, 123, 59, 0.12);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-subtle: var(--surface-subtle);
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
   --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-muted: var(--accent-muted);
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #FFFFFF;
 }
 
 body {

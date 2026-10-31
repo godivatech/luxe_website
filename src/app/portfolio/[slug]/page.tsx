@@ -36,7 +36,7 @@ export default async function ProjectPage({ params }: Props) {
           <p className="text-accent tracking-widest uppercase text-sm mb-4">{project.category}</p>
           <h1 className="font-serif text-5xl md:text-7xl font-bold mb-12">{project.title}</h1>
           
-          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-lg bg-white/5">
+          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-xl bg-surface-muted shadow-[0_8px_30px_rgba(22,21,20,0.06)]">
             <img 
               src={project.coverImage} 
               alt={project.title} 
@@ -48,8 +48,8 @@ export default async function ProjectPage({ params }: Props) {
         {/* Description (Optional) */}
         {project.description && (
           <div className="max-w-3xl mb-16">
-            <h2 className="text-2xl font-serif mb-6">About the Project</h2>
-            <p className="text-foreground/80 leading-relaxed">
+            <h2 className="text-2xl font-serif mb-6 text-foreground">About the Project</h2>
+            <p className="text-foreground/80 leading-relaxed text-lg">
               {project.description}
             </p>
           </div>
@@ -57,10 +57,10 @@ export default async function ProjectPage({ params }: Props) {
 
         {/* Gallery */}
         <div className="mb-8">
-          <h2 className="text-2xl font-serif mb-8">Gallery</h2>
+          <h2 className="text-2xl font-serif mb-8 text-foreground">Gallery</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {project.gallery.map((img, index) => (
-              <div key={index} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white/5">
+              <div key={index} className="relative aspect-[4/3] rounded-xl overflow-hidden bg-surface-muted shadow-[0_8px_30px_rgba(22,21,20,0.06)]">
                 <img 
                   src={img} 
                   alt={`${project.title} gallery image ${index + 1}`} 

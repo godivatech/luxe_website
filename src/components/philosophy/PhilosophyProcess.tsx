@@ -31,7 +31,7 @@ const steps = [
 
 export default function PhilosophyProcess() {
   return (
-    <section className="py-24 md:py-36 bg-background px-6 border-b border-white/5">
+    <section className="py-24 md:py-36 bg-background px-6 border-b border-border">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           {/* Header Column */}
@@ -39,7 +39,7 @@ export default function PhilosophyProcess() {
             <span className="text-accent uppercase tracking-widest text-xs font-semibold block mb-4">
               Our Journey
             </span>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold leading-tight mb-8">
+            <h2 className="font-serif text-3xl md:text-5xl font-bold leading-tight mb-8 text-foreground">
               A careful, step-by-step process from a bare room to a finished home
             </h2>
             <p className="text-foreground/60 leading-relaxed font-sans max-w-md">
@@ -53,7 +53,7 @@ export default function PhilosophyProcess() {
           {/* Process Timeline Column */}
           <div className="lg:col-span-7 space-y-16 relative">
             {/* Visual connecting line */}
-            <div className="absolute left-6 top-4 bottom-4 w-[1px] bg-white/10 hidden md:block" />
+            <div className="absolute left-6 top-4 bottom-4 w-[1px] bg-border hidden md:block" />
 
             {steps.map((s, index) => (
               <motion.div
@@ -65,7 +65,7 @@ export default function PhilosophyProcess() {
                 className="relative md:pl-20 flex flex-col md:flex-row gap-6 md:gap-10"
               >
                 {/* Step Circle for larger screens */}
-                <div className="absolute left-0 top-0 w-12 h-12 rounded-full border border-accent bg-background text-accent flex items-center justify-center font-serif text-lg font-bold z-10 hidden md:flex">
+                <div className="absolute left-0 top-0 w-12 h-12 rounded-full border border-accent bg-surface text-accent flex items-center justify-center font-serif text-lg font-bold z-10 hidden md:flex shadow-sm">
                   {s.num}
                 </div>
 
@@ -78,7 +78,7 @@ export default function PhilosophyProcess() {
                       Phase {s.num} / {s.phase}
                     </span>
                   </div>
-                  <h3 className="font-serif text-2xl font-semibold mb-4 text-white">
+                  <h3 className="font-serif text-2xl font-semibold mb-4 text-foreground">
                     {s.title}
                   </h3>
                   <p className="text-foreground/60 leading-relaxed text-sm md:text-base max-w-xl font-sans">

@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-background relative text-foreground pt-32 pb-12 px-6 md:px-12 border-t border-white/5" id="connect">
+    <footer className="bg-background relative text-foreground pt-32 pb-12 px-6 md:px-12 border-t border-border" id="connect">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
         <div className="lg:col-span-5">
           <Image
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/5 text-sm text-foreground/40">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border text-sm text-foreground/50">
         <p>&copy; {new Date().getFullYear()} LUXE Interior Decors. All rights reserved.</p>
         <div className="flex gap-6 mt-4 md:mt-0">
           <p>

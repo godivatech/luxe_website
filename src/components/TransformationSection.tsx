@@ -41,7 +41,7 @@ export default function TransformationSection() {
   }, []);
 
   return (
-    <section className="py-24 md:py-48 bg-[#0a0a0a] px-6">
+    <section className="py-24 md:py-48 bg-background px-6">
       <div className="container mx-auto">
         <div className="mb-20 text-center max-w-2xl mx-auto">
           <motion.h2 
@@ -70,7 +70,7 @@ export default function TransformationSection() {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
           ref={containerRef}
-          className="relative w-full aspect-[4/3] md:aspect-[21/9] overflow-hidden select-none cursor-ew-resize rounded-lg"
+          className="relative w-full aspect-[4/3] md:aspect-[21/9] overflow-hidden select-none cursor-ew-resize rounded-2xl border border-border shadow-[0_12px_40px_rgba(22,21,20,0.08)]"
           onMouseMove={handleMouseMove}
           onTouchMove={handleTouchMove}
           onMouseDown={(e) => {
@@ -90,7 +90,7 @@ export default function TransformationSection() {
               className="w-full h-full object-cover select-none"
               draggable="false"
             />
-            <div className="absolute top-6 right-6 bg-black/50 backdrop-blur-sm px-4 py-2 rounded text-white text-sm font-sans tracking-widest uppercase">After</div>
+            <div className="absolute top-6 right-6 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full text-white text-xs font-sans tracking-widest uppercase">After</div>
           </div>
 
           {/* Before image (Foreground clippath) */}
@@ -101,12 +101,12 @@ export default function TransformationSection() {
               className="w-full h-full object-cover select-none"
               draggable="false"
             />
-            <div className="absolute top-6 left-6 bg-black/50 backdrop-blur-sm px-4 py-2 rounded text-white text-sm font-sans tracking-widest uppercase">Before</div>
+            <div className="absolute top-6 left-6 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full text-white text-xs font-sans tracking-widest uppercase">Before</div>
           </div>
 
           {/* Slider Line & Handle */}
           <div className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize shadow-[0_0_15px_rgba(0,0,0,0.5)]" style={{ left: `calc(${sliderPosition}% - 2px)` }}>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg text-black">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xl text-foreground">
               <MoveHorizontal size={24} />
             </div>
           </div>

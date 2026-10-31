@@ -66,17 +66,17 @@ export default function PortfolioPage() {
                 className="group cursor-pointer"
               >
                 <Link href={`/portfolio/${project.id}`}>
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-lg mb-4 bg-white/5">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-xl mb-4 bg-surface-muted shadow-[0_8px_30px_rgba(22,21,20,0.06)]">
                     <img
                       src={project.coverImage}
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
                   </div>
                   <div className="flex justify-between items-start">
                     <div>
-                      <h3 className="font-serif text-2xl group-hover:text-accent transition-colors">{project.title}</h3>
+                      <h3 className="font-serif text-2xl text-foreground group-hover:text-accent transition-colors">{project.title}</h3>
                       <p className="text-foreground/50 text-sm tracking-widest uppercase mt-1">{project.category}</p>
                     </div>
                   </div>

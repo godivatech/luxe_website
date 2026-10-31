@@ -16,8 +16,8 @@ export default function HeroSection() {
   return (
     <section ref={container} className="relative h-screen w-full overflow-hidden bg-background">
       <motion.div style={{ y, opacity }} className="absolute inset-0 w-full h-full">
-        {/* Placeholder for video/image. A dark elegant gradient for now */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-10" />
+        {/* Placeholder for video/image. An elegant gradient transitioning to page background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/40 to-background z-10" />
         <img
           src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2800&auto=format&fit=crop"
           alt="Luxury Interior"
@@ -31,10 +31,10 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
         >
-          <span className="text-accent uppercase tracking-[0.3em] text-xs md:text-sm mb-6 block font-sans">
+          <span className="text-accent uppercase tracking-[0.3em] text-xs md:text-sm mb-6 block font-sans font-semibold">
             Welcome to LUXE
           </span>
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl font-bold leading-tight mb-8">
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl font-bold leading-tight mb-8 text-white">
             Elevating Spaces,<br />
             <span className="italic font-light text-white/90 text-4xl md:text-6xl lg:text-7xl block mt-4">Turning spaces into <br className="md:hidden" /> luxury statements.</span>
           </h1>
@@ -46,8 +46,8 @@ export default function HeroSection() {
           transition={{ delay: 1.5, duration: 2 }}
           className="absolute bottom-12 flex flex-col items-center gap-4"
         >
-          <span className="text-xs uppercase tracking-widest text-white/50">Scroll to Explore</span>
-          <div className="w-[1px] h-16 bg-white/20 relative overflow-hidden">
+          <span className="text-xs uppercase tracking-widest text-foreground/70 font-medium">Scroll to Explore</span>
+          <div className="w-[1px] h-16 bg-foreground/20 relative overflow-hidden">
             <motion.div
               animate={{ y: ["-100%", "100%"] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
