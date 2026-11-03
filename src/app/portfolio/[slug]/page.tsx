@@ -3,6 +3,12 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
+export function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.id,
+  }));
+}
+
 type Props = {
   params: Promise<{ slug: string }> | { slug: string };
 };
@@ -33,7 +39,7 @@ export default async function ProjectPage({ params }: Props) {
 
         {/* Hero Section */}
         <div className="mb-16">
-          <p className="text-accent trackin g-widest uppercase text-sm mb-4">{project.category}</p>
+          <p className="text-accent tracking-widest uppercase text-sm mb-4">{project.category}</p>
           <h1 className="font-serif text-5xl md:text-7xl font-bold mb-12">{project.title}</h1>
 
           <div className="relative aspect-[21/9] w-full overflow-hidden rounded-xl bg-surface-muted shadow-[0_8px_30px_rgba(22,21,20,0.06)]">
