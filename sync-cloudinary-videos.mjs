@@ -11,6 +11,7 @@ cloudinary.config({
   cloud_name: cloudName,
   api_key: apiKey,
   api_secret: apiSecret,
+  timeout: 600000,
   secure: true
 });
 
@@ -98,18 +99,25 @@ async function uploadOne(item, index, total) {
 
   let result;
   if (stat.size >= 20 * 1024 * 1024) {
-    // Large file: chunked upload
-    result = await cloudinary.uploader.upload_large(filePath, {
-      resource_type: 'video',
-      chunk_size: 20000000,
-      folder,
-      public_id: publicId,
-      overwrite: true
+    // Large file: chunked upload wrapped in Promise
+    result = await new Promise((resolve, reject) => {
+      cloudinary.uploader.upload_large(filePath, {
+        resource_type: 'video',
+        chunk_size: 6000000,
+        timeout: 600000,
+        folder,
+        public_id: publicId,
+        overwrite: true
+      }, (err, res) => {
+        if (err) reject(err);
+        else resolve(res);
+      });
     });
   } else {
     // Direct upload
     result = await cloudinary.uploader.upload(filePath, {
       resource_type: 'video',
+      timeout: 600000,
       folder,
       public_id: publicId,
       overwrite: true

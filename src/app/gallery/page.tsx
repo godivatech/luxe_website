@@ -3,10 +3,12 @@
 import { useState, useEffect, Suspense, useRef } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Play, X, Film } from "lucide-react";
+import { Play, X, Film, ChevronLeft, ChevronRight } from "lucide-react";
 import { videos, VideoProject } from "@/data/videos";
 
 type Category = "All" | "Residential" | "Commercial";
+
+const ITEMS_PER_PAGE = 9;
 
 function formatDuration(seconds?: number) {
   if (!seconds) return "";
@@ -28,13 +30,16 @@ function GalleryContent() {
       : null;
 
   const [filter, setFilter] = useState<Category>(validParam || "All");
+  const [currentPage, setCurrentPage] = useState(1);
   const [selectedVideo, setSelectedVideo] = useState<VideoProject | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const gridTopRef = useRef<HTMLDivElement>(null);
 
   // Sync state with URL params & sessionStorage
   useEffect(() => {
     if (validParam) {
       setFilter(validParam);
+      setCurrentPage(1);
     } else {
       const saved = sessionStorage.getItem("luxe_gallery_category") as Category | null;
       if (saved && (saved === "Residential" || saved === "Commercial")) {
@@ -42,6 +47,7 @@ function GalleryContent() {
       } else {
         setFilter("All");
       }
+      setCurrentPage(1);
     }
   }, [validParam]);
 
@@ -70,6 +76,7 @@ function GalleryContent() {
 
   const handleFilterChange = (category: Category) => {
     setFilter(category);
+    setCurrentPage(1);
     if (category === "All") {
       sessionStorage.removeItem("luxe_gallery_category");
       router.replace("/gallery", { scroll: false });
@@ -82,6 +89,20 @@ function GalleryContent() {
   const filteredVideos = videos.filter(
     (v) => filter === "All" || v.category === filter
   );
+
+  const totalPages = Math.ceil(filteredVideos.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, filteredVideos.length);
+  const displayedVideos = filteredVideos.slice(startIndex, endIndex);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    if (gridTopRef.current) {
+      gridTopRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.scrollTo({ top: 320, behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="pt-32 pb-24 min-h-screen bg-background">
@@ -139,10 +160,13 @@ function GalleryContent() {
           ))}
         </motion.div>
 
+        {/* Scroll Anchor */}
+        <div ref={gridTopRef} className="-mt-8 pt-8" />
+
         {/* Video Grid */}
         <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence mode="popLayout">
-            {filteredVideos.map((video) => (
+            {displayedVideos.map((video) => (
               <motion.div
                 key={video.id}
                 layout
@@ -198,6 +222,50 @@ function GalleryContent() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Numbered Pagination (Option 1) */}
+        {totalPages > 1 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-16 flex justify-center items-center gap-2 border-t border-border pt-8"
+          >
+            {/* Prev Button */}
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="w-10 h-10 rounded-lg border border-border flex items-center justify-center text-foreground/70 hover:border-accent hover:text-accent disabled:opacity-30 disabled:pointer-events-none transition-all cursor-pointer"
+              aria-label="Previous page"
+            >
+              <ChevronLeft size={18} />
+            </button>
+
+            {/* Number Buttons */}
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+              <button
+                key={pageNum}
+                onClick={() => handlePageChange(pageNum)}
+                className={`w-10 h-10 rounded-lg text-sm font-medium transition-all cursor-pointer ${
+                  currentPage === pageNum
+                    ? "bg-accent text-accent-foreground font-semibold shadow-md"
+                    : "border border-border text-foreground/70 hover:border-accent hover:text-accent"
+                }`}
+              >
+                {pageNum}
+              </button>
+            ))}
+
+            {/* Next Button */}
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="w-10 h-10 rounded-lg border border-border flex items-center justify-center text-foreground/70 hover:border-accent hover:text-accent disabled:opacity-30 disabled:pointer-events-none transition-all cursor-pointer"
+              aria-label="Next page"
+            >
+              <ChevronRight size={18} />
+            </button>
+          </motion.div>
+        )}
 
       </div>
 
@@ -276,4 +344,3 @@ export default function GalleryPage() {
     </Suspense>
   );
 }
-
