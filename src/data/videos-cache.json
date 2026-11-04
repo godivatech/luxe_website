@@ -228,5 +228,15 @@
     "duration": 47,
     "width": 1920,
     "height": 1080
+  },
+  "zeeya-sulthans-3d": {
+    "id": "zeeya-sulthans-3d",
+    "title": "Zeeya Sulthans 3D",
+    "category": "Commercial",
+    "videoUrl": "https://res.cloudinary.com/doeodacsg/video/upload/v1793806404/luxe%20website/videos/zeeya-sulthans-3d.mp4",
+    "posterUrl": "https://res.cloudinary.com/doeodacsg/video/upload/so_1,w_800,c_scale/f_auto,q_auto/luxe website/videos/zeeya-sulthans-3d.jpg",
+    "duration": 37,
+    "width": 1920,
+    "height": 1080
   }
 }
