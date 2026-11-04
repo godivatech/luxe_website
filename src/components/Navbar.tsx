@@ -78,6 +78,9 @@ export default function Navbar() {
             <Link href="/portfolio" className={navLinkClasses}>
               Portfolio
             </Link>
+            <Link href="/gallery" className={navLinkClasses}>
+              Gallery
+            </Link>
             <Link href="/connect" className={navLinkClasses}>
               Connect
             </Link>
@@ -122,6 +125,11 @@ export default function Navbar() {
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
                 <Link href="/portfolio" onClick={() => setMobileMenuOpen(false)} className="font-serif text-4xl text-foreground hover:text-accent transition-colors">
                   Portfolio
+                </Link>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }}>
+                <Link href="/gallery" onClick={() => setMobileMenuOpen(false)} className="font-serif text-4xl text-foreground hover:text-accent transition-colors">
+                  Gallery
                 </Link>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>

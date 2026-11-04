@@ -77,6 +77,9 @@ export default function Footer() {
                 <Link href="/portfolio" className="text-sm text-foreground/75 hover:text-accent transition-colors">
                   Portfolio
                 </Link>
+                <Link href="/gallery" className="text-sm text-foreground/75 hover:text-accent transition-colors">
+                  Gallery
+                </Link>
                 <Link href="/connect" className="text-sm text-foreground/75 hover:text-accent transition-colors">
                   Connect
                 </Link>
