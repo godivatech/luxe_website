@@ -40,5 +40,15 @@ export const videos: VideoProject[] = [
     "duration": 18,
     "width": 1080,
     "height": 1080
+  },
+  {
+    "id": "red-5-ganapathy",
+    "title": "Red 5 Ganapathy",
+    "category": "Residential",
+    "videoUrl": "https://res.cloudinary.com/doeodacsg/video/upload/v1793798090/luxe%20website/videos/red-5-ganapathy.mp4",
+    "posterUrl": "https://res.cloudinary.com/doeodacsg/video/upload/so_1,w_800,c_scale/f_auto,q_auto/luxe website/videos/red-5-ganapathy.jpg",
+    "duration": 30,
+    "width": 720,
+    "height": 1080
   }
 ];
