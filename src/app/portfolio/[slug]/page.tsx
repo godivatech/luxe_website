@@ -11,11 +11,13 @@ export function generateStaticParams() {
 
 type Props = {
   params: Promise<{ slug: string }> | { slug: string };
+  searchParams?: Promise<{ category?: string }> | { category?: string };
 };
 
-export default async function ProjectPage({ params }: Props) {
-  // Handle both Next.js 14 (object) and 15 (Promise) 
+export default async function ProjectPage({ params, searchParams }: Props) {
+  // Handle both Next.js 14 (object) and 15+ (Promise) 
   const resolvedParams = await Promise.resolve(params);
+  const resolvedSearchParams = searchParams ? await Promise.resolve(searchParams) : {};
   const { slug } = resolvedParams;
 
   const project = projects.find((p) => p.id === slug);
@@ -24,16 +26,24 @@ export default async function ProjectPage({ params }: Props) {
     notFound();
   }
 
+  // Preserve the category the user was browsing, defaulting to the project's own category
+  const activeCategory =
+    resolvedSearchParams?.category && resolvedSearchParams.category !== "All"
+      ? resolvedSearchParams.category
+      : project.category;
+
+  const backUrl = `/portfolio?category=${activeCategory}`;
+
   return (
     <div className="pt-32 pb-24 min-h-screen bg-background">
       <div className="container mx-auto px-6 md:px-12">
 
         {/* Back Button */}
         <Link
-          href="/portfolio"
-          className="inline-flex items-center gap-2 text-foreground/60 hover:text-accent transition-colors mb-12 uppercase tracking-widest text-sm"
+          href={backUrl}
+          className="inline-flex items-center gap-2 text-foreground/60 hover:text-accent transition-colors mb-12 uppercase tracking-widest text-sm group"
         >
-          <ArrowLeft size={16} />
+          <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-1" />
           Back to Portfolio
         </Link>
 
@@ -47,6 +57,7 @@ export default async function ProjectPage({ params }: Props) {
               src={project.coverImage}
               alt={project.title}
               className="w-full h-full object-cover"
+              fetchPriority="high"
             />
           </div>
         </div>
@@ -63,14 +74,19 @@ export default async function ProjectPage({ params }: Props) {
 
         {/* Gallery */}
         <div className="mb-8">
-          <h2 className="text-2xl font-serif mb-8 text-foreground">Gallery</h2>
+          <h2 className="text-2xl font-serif mb-8 text-foreground">Gallery ({project.gallery.length} Images)</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {project.gallery.map((img, index) => (
-              <div key={index} className="relative aspect-[4/3] rounded-xl overflow-hidden bg-surface-muted shadow-[0_8px_30px_rgba(22,21,20,0.06)]">
+              <div
+                key={index}
+                className="relative aspect-[4/3] rounded-xl overflow-hidden bg-surface-muted shadow-[0_8px_30px_rgba(22,21,20,0.06)] group"
+              >
                 <img
                   src={img}
                   alt={`${project.title} gallery image ${index + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
