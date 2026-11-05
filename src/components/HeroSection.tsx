@@ -14,10 +14,10 @@ export default function HeroSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section ref={container} className="relative h-screen w-full overflow-hidden bg-background">
+    <section ref={container} className="relative h-screen w-full overflow-hidden bg-black">
       <motion.div style={{ y, opacity }} className="absolute inset-0 w-full h-full">
-        {/* Placeholder for video/image. An elegant gradient transitioning to page background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/40 to-background z-10" />
+        {/* Deep luxury black gradient at top and bottom, eliminating washed out white bleach */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/35 to-black z-10" />
         <img
           src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2800&auto=format&fit=crop"
           alt="Luxury Interior"
@@ -46,8 +46,8 @@ export default function HeroSection() {
           transition={{ delay: 1.5, duration: 2 }}
           className="absolute bottom-12 flex flex-col items-center gap-4"
         >
-          <span className="text-xs uppercase tracking-widest text-foreground/70 font-medium">Scroll to Explore</span>
-          <div className="w-[1px] h-16 bg-foreground/20 relative overflow-hidden">
+          <span className="text-xs uppercase tracking-widest text-white/80 font-medium">Scroll to Explore</span>
+          <div className="w-[1px] h-16 bg-white/20 relative overflow-hidden">
             <motion.div
               animate={{ y: ["-100%", "100%"] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

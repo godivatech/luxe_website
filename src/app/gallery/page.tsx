@@ -26,8 +26,8 @@ function GalleryContent() {
     categoryParam === "Residential" || categoryParam === "Commercial"
       ? categoryParam
       : categoryParam === "All"
-      ? "All"
-      : null;
+        ? "All"
+        : null;
 
   const [filter, setFilter] = useState<Category>(validParam || "All");
   const [currentPage, setCurrentPage] = useState(1);
@@ -119,7 +119,7 @@ function GalleryContent() {
   return (
     <div className="pt-32 pb-24 min-h-screen bg-background">
       <div className="container mx-auto px-6 md:px-12">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <motion.div
@@ -161,11 +161,10 @@ function GalleryContent() {
             <button
               key={category}
               onClick={() => handleFilterChange(category)}
-              className={`text-sm uppercase tracking-widest pb-2 border-b-2 transition-all cursor-pointer ${
-                filter === category
+              className={`text-sm uppercase tracking-widest pb-2 border-b-2 transition-all cursor-pointer ${filter === category
                   ? "border-accent text-accent font-medium"
                   : "border-transparent text-foreground/50 hover:text-foreground"
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -257,11 +256,10 @@ function GalleryContent() {
               <button
                 key={pageNum}
                 onClick={() => handlePageChange(pageNum)}
-                className={`w-10 h-10 rounded-lg text-sm font-medium transition-all cursor-pointer ${
-                  currentPage === pageNum
+                className={`w-10 h-10 rounded-lg text-sm font-medium transition-all cursor-pointer ${currentPage === pageNum
                     ? "bg-accent text-accent-foreground font-semibold shadow-md"
                     : "border border-border text-foreground/70 hover:border-accent hover:text-accent"
-                }`}
+                  }`}
               >
                 {pageNum}
               </button>

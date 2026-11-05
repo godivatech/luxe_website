@@ -16,11 +16,11 @@ export default function PhilosophyHero() {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen w-full overflow-hidden bg-background flex items-center"
+      className="relative h-screen w-full overflow-hidden bg-black flex items-center"
     >
       {/* Background Image Container */}
       <motion.div style={{ y: imgY, opacity }} className="absolute inset-0 w-full h-full">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-background z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/35 to-black z-10" />
         <img
           src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2500&auto=format&fit=crop"
           alt="Luxury Architecture Detail"
@@ -75,7 +75,7 @@ export default function PhilosophyHero() {
             className="absolute top-0 w-full h-full bg-accent"
           />
         </div>
-        <span className="text-xs uppercase tracking-widest text-white/50">Scroll to explore</span>
+        <span className="text-xs uppercase tracking-widest text-white/80 font-medium">Scroll to explore</span>
       </motion.div>
     </section>
   );
