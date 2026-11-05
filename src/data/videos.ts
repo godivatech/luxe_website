@@ -250,5 +250,35 @@ export const videos: VideoProject[] = [
     "duration": 37,
     "width": 1920,
     "height": 1080
+  },
+  {
+    "id": "asife-restaurant",
+    "title": "Asife Restaurant",
+    "category": "Commercial",
+    "videoUrl": "https://res.cloudinary.com/doeodacsg/video/upload/v1793859275/luxe%20website/videos/asife-restaurant.mp4",
+    "posterUrl": "https://res.cloudinary.com/doeodacsg/video/upload/so_1,w_800,c_scale/f_auto,q_auto/luxe website/videos/asife-restaurant.jpg",
+    "duration": 45,
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "id": "kem-residence",
+    "title": "KEM Residence",
+    "category": "Residential",
+    "videoUrl": "https://res.cloudinary.com/doeodacsg/video/upload/v1793859322/luxe%20website/videos/kem-residence.mp4",
+    "posterUrl": "https://res.cloudinary.com/doeodacsg/video/upload/so_1,w_800,c_scale/f_auto,q_auto/luxe website/videos/kem-residence.jpg",
+    "duration": 64,
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "id": "thirunelveli-residence",
+    "title": "Thirunelveli Residence",
+    "category": "Residential",
+    "videoUrl": "https://res.cloudinary.com/doeodacsg/video/upload/v1793859373/luxe%20website/videos/thirunelveli-residence.mp4",
+    "posterUrl": "https://res.cloudinary.com/doeodacsg/video/upload/so_1,w_800,c_scale/f_auto,q_auto/luxe website/videos/thirunelveli-residence.jpg",
+    "duration": 49,
+    "width": 1920,
+    "height": 1080
   }
 ];

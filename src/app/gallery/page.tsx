@@ -97,11 +97,23 @@ function GalleryContent() {
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    if (gridTopRef.current) {
-      gridTopRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      window.scrollTo({ top: 320, behavior: "smooth" });
-    }
+
+    const scrollToTop = () => {
+      const lenis = typeof window !== "undefined" ? (window as any).lenis : null;
+      const target = gridTopRef.current;
+
+      if (lenis && target) {
+        lenis.scrollTo(target, { offset: -130, duration: 0.9 });
+      } else if (target) {
+        const top = target.getBoundingClientRect().top + window.scrollY - 130;
+        window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    };
+
+    scrollToTop();
+    setTimeout(scrollToTop, 50);
   };
 
   return (
@@ -161,7 +173,7 @@ function GalleryContent() {
         </motion.div>
 
         {/* Scroll Anchor */}
-        <div ref={gridTopRef} className="-mt-8 pt-8" />
+        <div id="gallery-grid" ref={gridTopRef} className="scroll-mt-32 -mt-8 pt-8" />
 
         {/* Video Grid */}
         <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

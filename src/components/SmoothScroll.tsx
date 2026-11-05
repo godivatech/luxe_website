@@ -19,6 +19,9 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     });
 
     lenisRef.current = lenis;
+    if (typeof window !== "undefined") {
+      (window as any).lenis = lenis;
+    }
 
     function raf(time: number) {
       lenis.raf(time);
@@ -70,6 +73,9 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
     return () => {
       lenis.destroy();
+      if (typeof window !== "undefined" && (window as any).lenis === lenis) {
+        delete (window as any).lenis;
+      }
       document.removeEventListener("click", handleAnchorClick, { capture: true });
     };
   }, []);
